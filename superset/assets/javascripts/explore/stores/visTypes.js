@@ -121,6 +121,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       groupby: {
         label: t('Series'),
       },
@@ -134,6 +137,11 @@ export const visTypes = {
   pie: {
     label: t('Pie Chart'),
     showOnExplore: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -143,6 +151,7 @@ export const visTypes = {
           ['limit'],
         ],
       },
+      
       {
         label: t('Chart Options'),
         expanded: true,
@@ -193,6 +202,9 @@ export const visTypes = {
       sections.annotations,
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         choices: D3_TIME_FORMAT_OPTIONS,
         default: 'smart_date',
@@ -239,6 +251,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         choices: D3_TIME_FORMAT_OPTIONS,
         default: 'smart_date',
@@ -275,6 +290,9 @@ export const visTypes = {
       sections.annotations,
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       metric: {
         label: t('Left Axis Metric'),
         description: t('Choose a metric for left axis'),
@@ -320,6 +338,9 @@ export const visTypes = {
       sections.annotations,
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         choices: D3_TIME_FORMAT_OPTIONS,
         default: 'smart_date',
@@ -344,6 +365,9 @@ export const visTypes = {
       sections.annotations,
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         choices: D3_TIME_FORMAT_OPTIONS,
         default: 'smart_date',
@@ -354,6 +378,11 @@ export const visTypes = {
   deck_multi: {
     label: t('Deck.gl - Multiple Layers'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Map'),
@@ -397,6 +426,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       size: {
         label: t('Height'),
         description: t('Metric used to control height'),
@@ -435,6 +467,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       size: {
         label: t('Height'),
         description: t('Metric used to control height'),
@@ -446,6 +481,11 @@ export const visTypes = {
   deck_path: {
     label: t('Deck.gl - Paths'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -512,6 +552,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       size: {
         label: t('Weight'),
         description: t("Metric used as a weight for the grid's coloring"),
@@ -523,6 +566,11 @@ export const visTypes = {
   deck_geojson: {
     label: t('Deck.gl - geoJson'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -562,6 +610,11 @@ export const visTypes = {
   deck_polygon: {
     label: t('Deck.gl - Polygon'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -602,6 +655,11 @@ export const visTypes = {
   deck_arc: {
     label: t('Deck.gl - Arc'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -694,6 +752,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       dimension: {
         label: t('Categorical Color'),
         description: t('Pick a dimension from which categorical colors are defined'),
@@ -732,6 +793,9 @@ export const visTypes = {
       sections.annotations,
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         default: 'smart_date',
         choices: D3_TIME_FORMAT_OPTIONS,
@@ -778,7 +842,7 @@ export const visTypes = {
         validators: [],
       },
       time_grain_sqla: {
-        default: null,
+        default: 'day',
       },
     },
   },
@@ -801,6 +865,9 @@ export const visTypes = {
       groupby: {
         multiple: false,
       },
+      time_grain_sqla: {
+        default: 'day',
+      },
       url: {
         description: t(
           "Templated link, it's possible to include {{ metric }} " +
@@ -811,6 +878,11 @@ export const visTypes = {
 
   markup: {
     label: t('Markup'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Code'),
@@ -845,6 +917,9 @@ export const visTypes = {
     controlOverrides: {
       groupby: { includeTime: true },
       columns: { includeTime: true },
+      time_grain_sqla: {
+        default: 'day',
+      },
     },
   },
 
@@ -860,6 +935,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       code: {
         default: '####Section Title\n' +
         'A paragraph describing the section' +
@@ -872,6 +950,11 @@ export const visTypes = {
 
   word_cloud: {
     label: t('Word Cloud'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -914,6 +997,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       color_scheme: {
         renderTrigger: false,
       },
@@ -923,6 +1009,11 @@ export const visTypes = {
   cal_heatmap: {
     label: t('Calendar Heatmap'),
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -943,6 +1034,11 @@ export const visTypes = {
 
   box_plot: {
     label: t('Box Plot'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -1008,6 +1104,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       x_axis_format: {
         default: '.3s',
       },
@@ -1020,6 +1119,11 @@ export const visTypes = {
   bullet: {
     label: t('Bullet Chart'),
     requiresTime: false,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -1061,6 +1165,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       y_axis_format: {
         label: t('Number format'),
       },
@@ -1087,6 +1194,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       y_axis_format: {
         label: t('Number format'),
       },
@@ -1116,6 +1226,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       all_columns_x: {
         label: t('Numeric Column'),
         description: t('Select the numeric column to draw the histogram'),
@@ -1149,6 +1262,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       metric: {
         label: t('Primary Metric'),
         description: t('The primary metric is used to define the arc segment sizes'),
@@ -1188,6 +1304,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       groupby: {
         label: t('Source / Target'),
         description: t('Choose a source and a target'),
@@ -1216,6 +1335,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       groupby: {
         label: t('Source / Target'),
         description: t('Choose a source and a target'),
@@ -1243,6 +1365,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       y_axis_format: {
         label: t('Number format'),
         description: t('Choose a number format'),
@@ -1282,6 +1407,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       entity: {
         label: t('ISO 3166-2 codes of region/province/department'),
         description: t('It\'s ISO 3166-2 of your region/province/department in your table. (see documentation for list of ISO 3166-2)'),
@@ -1317,6 +1445,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       entity: {
         label: t('Country Control'),
         description: t('3 letter code of the country'),
@@ -1348,6 +1479,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       groupby: {
         label: t('Filter controls'),
         description: t(
@@ -1362,6 +1496,11 @@ export const visTypes = {
 
   iframe: {
     label: t('iFrame'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Options'),
@@ -1374,6 +1513,11 @@ export const visTypes = {
 
   para: {
     label: t('Parallel Coordinates'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       {
         label: t('Query'),
@@ -1420,6 +1564,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       all_columns_x: {
         validators: [v.nonEmpty],
       },
@@ -1443,6 +1590,11 @@ export const visTypes = {
 
   horizon: {
     label: t('Horizon'),
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       sections.NVD3TimeSeries[0],
       {
@@ -1500,6 +1652,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       all_columns_x: {
         label: t('Longitude'),
         description: t('Column containing longitude data'),
@@ -1547,6 +1702,9 @@ export const visTypes = {
       },
     ],
     controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      },
       entity: {
         label: t('Column containing entity ids'),
         description: t('e.g., a "user id" column'),
@@ -1574,6 +1732,11 @@ export const visTypes = {
     label: t('Time Series - Paired t-test'),
     showOnExplore: true,
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       sections.NVD3TimeSeries[0],
       {
@@ -1592,6 +1755,11 @@ export const visTypes = {
     label: t('Time Series - Nightingale Rose Chart'),
     showOnExplore: true,
     requiresTime: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       sections.NVD3TimeSeries[0],
       {
@@ -1610,6 +1778,11 @@ export const visTypes = {
   partition: {
     label: 'Partition Diagram',
     showOnExplore: true,
+    controlOverrides: {
+      time_grain_sqla: {
+        default: 'day',
+      }
+    },
     controlPanelSections: [
       sections.NVD3TimeSeries[0],
       {
@@ -1647,3 +1820,4 @@ export function sectionsToRender(vizType, datasourceType) {
     datasourceType === 'table' ? sections.filters[0] : sections.filters,
   );
 }
+
